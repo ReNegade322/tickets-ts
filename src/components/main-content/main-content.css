@@ -1,0 +1,75 @@
+.main--content{
+    width: 100%;
+    height: 100%;
+  }
+  .main--content--block{
+    border: 1px solid rgb(38, 38, 41);
+    margin-bottom: 10px;
+  }
+  .content--title{
+    background: rgb(38, 38, 41);
+    padding: 10px 15px;
+    font-weight: 400;
+  }
+  .inner--content{
+    padding: 15px;
+    display: flex;
+  }
+  .flex{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .content--img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    background: rgb(24, 23, 26);
+  }
+  .name{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  .job{
+    display: inline;
+    margin-top: 5px;
+    font-size: 11px;
+  }
+  .content--label{
+    width: 100%;
+    margin-bottom: 25px;
+    color: rgb(129, 129, 129);
+  }
+  .info{
+    margin: 10px 10px 0 0;
+    color: white;
+  }
+  .employee--status{
+    width: fit-content;
+    padding: 5px 15px;
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 4px;
+  }
+
+  .content--top--bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .ticket--label{
+    color: rgb(129, 129, 129);
+    font-size: 12px;
+  }
+  .ticket--info{
+    display: inline;
+    color: white;
+    margin-left: 5px;
+  }
+  .location{
+    display: flex;
+  }

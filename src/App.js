@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import EmployeesList from './components/employees-list/employees-list';
+import MainContent from './components/main-content/main-content';
+import { fetchData } from './store/ticketSlice';
+
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import './App.css';
 
+
 function App() {
+  const dispatch = useDispatch()
+  const {chosen} = useSelector(state => state.data)
+
+  useEffect(() => {
+    dispatch(fetchData())
+  }, [dispatch])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='main--title'>Tickets</h1>
+      <hr />
+
+      <div className="container">
+        <div className='side--bar'>
+          <input className='search--panel' type="text" />
+          <EmployeesList />
+        </div>
+        <div className='ticket--selected'>
+          {chosen === null && <h1>No ticket selected</h1>}
+          {chosen !== null && <MainContent />}
+        </div>
+
+        
+      </div>
     </div>
   );
 }

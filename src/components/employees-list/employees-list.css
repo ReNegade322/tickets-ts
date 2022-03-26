@@ -1,0 +1,31 @@
+  .search--panel{
+    box-sizing: border-box;
+    background-color: rgb(31, 31, 34);
+    border: 1px solid rgb(53, 53, 53);
+    margin: 5px 0 10px;
+    height: 30px;
+    width: 100%;
+    color: white;
+  }
+  .employees--list{
+    padding: 10px 0 0 0;
+    background: rgb(53, 53, 58);
+    height: 94%;
+    overflow-y: scroll;
+  }
+  .side-bar--titles{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    padding-bottom: 15px;
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(20, 20, 20);
+  }
+  .owner--title{
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  .user--title{
+    margin-right: 10px;
+  }
