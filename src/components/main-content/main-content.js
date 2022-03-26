@@ -16,7 +16,7 @@ const MainContent = () => {
         <div className='main--content'>
             <div className='content--top--bar'>
                 <span className='ticket--label'>TICKET NO. <p className='ticket--info'>{mainData.id}</p></span>
-                <span className='ticket--label'>LAST UPDATED <p className='ticket--info'>02/07/21 23:55</p></span>
+                <span className='ticket--label'><p className='ticket--info'>{new Date().toString()}</p></span>
             </div>
 
             <div className="main--content--block">

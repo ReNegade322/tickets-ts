@@ -27,7 +27,12 @@
     border-radius: 4px;
   }
 
-.employee:hover{
+.chosen {
   background: rgb(66, 66, 73);
   box-shadow: 2px 0px 0px 0px rgba(176, 84, 240, 1) inset;
+}
+
+.employee:hover{
+  background: rgb(61, 61, 66);
+  box-shadow: 2px 0px 0px 0px rgb(125, 58, 173) inset;
 }

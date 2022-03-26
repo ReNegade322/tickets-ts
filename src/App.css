@@ -46,6 +46,20 @@ hr{
   flex-direction: row;
   height: 93vh;
 }
+.search--panel{
+  box-sizing: border-box;
+  background-color: rgb(31, 31, 34);
+  border: 1px solid rgb(53, 53, 53);
+  margin: 5px 0 10px;
+  height: 30px;
+  width: 100%;
+  color: white;
+
+  padding-left: 45px;
+  background-image: url(./search.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
 .side--bar{
   max-width: 500px;
   width: 100%;

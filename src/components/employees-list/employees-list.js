@@ -3,10 +3,15 @@ import Employee from '../employee/employee'
 
 import './employees-list.css'
 
-const EmployeesList = () => {
+const EmployeesList = ({text}) => {
     const data = useSelector(state => state.data.data)
     const {status} = useSelector(state => state.data)
-
+    let newData = data
+    
+    if (status !== 'loading' && text !== '') {
+        newData = data.filter(item => item.name.includes(text) || item.username.includes(text))
+    }
+    console.log(text)
     return (
         <div className='employees--list'>
             <div className='side-bar--titles'>
@@ -19,7 +24,7 @@ const EmployeesList = () => {
 
             {status === 'loading' && <h1>Loading...</h1>}
 
-            {data.map((employee) => (
+            {newData.map((employee) => (
                 <Employee key={employee.id} {...employee}/>
             ))}
         </div>       

@@ -14,6 +14,7 @@ const ticketSlice = createSlice({
     initialState: {
         data: [],
         chosen: null,
+        search: '',
         status: null,
         error: null,
     },
