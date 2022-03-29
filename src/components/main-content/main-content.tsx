@@ -1,10 +1,13 @@
 import { useSelector } from 'react-redux'
 
+import type { RootState } from '../../store'
+
 import './main-content.css'
 
 const MainContent = () => {
-    const mainData = useSelector(state => state.data.chosen)
-    const {status} = useSelector(state => state.data)
+
+    const mainData: any = useSelector((state: RootState) => state.data.chosen)!
+    const {status} = useSelector((state: RootState) => state.data)
     
     const url = `https://robohash.org/${mainData.id}${mainData.id + 1}${mainData.id + 2}.png`
 

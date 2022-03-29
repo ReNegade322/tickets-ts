@@ -1,14 +1,16 @@
 import { useDispatch } from 'react-redux';
 import { employeeClick } from '../../store/ticketSlice';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 
-import './employee.css'
+import type { RootState } from '../../store';
 
-const Employee = (props) => {
+import './employee.css';
+
+const Employee = (props: {id: number, name: string, username: string}) => {
     const dispatch = useDispatch();
 
-    const {status} = useSelector(state => state.data);
-    const mainData = useSelector(state => state.data.chosen)
+    const status :any = useSelector((state: RootState) => state.data);
+    const mainData :any = useSelector((state: RootState) => state.data.chosen)
     
     const url = `https://robohash.org/${props.id}${props.id + 1}${props.id + 2}.png`;
     let employeeClass = 'employee';

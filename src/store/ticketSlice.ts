@@ -7,7 +7,7 @@ export const fetchData = createAsyncThunk(
         const data = await response.json()
         return data
     }
-);
+)
 
 const ticketSlice = createSlice({
     name: 'data',
@@ -22,15 +22,15 @@ const ticketSlice = createSlice({
             state.chosen = action.payload
         },
     },
-    extraReducers: {
-        [fetchData.pending]: (state) => {
+    extraReducers: (builder) => {
+        builder.addCase(fetchData.pending, (state: any) => {
             state.status = 'loading';
             state.error = null;
-        },
-        [fetchData.fulfilled]: (state, action) => {
+        });
+        builder.addCase(fetchData.fulfilled, (state: any, action: any) => {
             state.status = 'resolved';
             state.data = action.payload
-        },
+        });
     }
 });
 

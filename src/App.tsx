@@ -1,23 +1,22 @@
 import EmployeesList from './components/employees-list/employees-list';
 import MainContent from './components/main-content/main-content';
 import { fetchData } from './store/ticketSlice';
+import { useDispatch, useSelector } from 'react-redux'
 
+import type { RootState } from '../src/store'
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
 import './App.css';
-
 
 function App() {
   const dispatch = useDispatch()
-  const {chosen} = useSelector(state => state.data)
+  const {chosen} = useSelector((state: RootState) => state.data)
   const [text, setText] = useState('')
   
   useEffect(() => {
     dispatch(fetchData())
   }, [dispatch])
 
-  const updateSearch = (text) => {
+  const updateSearch = (text: string) => {
     setText(text)
   }
   
